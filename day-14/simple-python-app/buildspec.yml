@@ -2,8 +2,8 @@ version: 0.2
 
 env:
   parameter-store:
-    DOCKER_REGISTRY_USERNAME: /myapp/docker-credentials/username
-    DOCKER_REGISTRY_PASSWORD: /myapp/docker-credentials/password
+    DOCKER_REGISTRY_USERNAME: /myapp/docker_username
+    DOCKER_REGISTRY_PASSWORD: /myapp/password
     DOCKER_REGISTRY_URL: /myapp/docker-registry/url
 phases:
   install:
@@ -12,7 +12,7 @@ phases:
   pre_build:
     commands:
       - echo "Installing dependencies..."
-      - pip install -r day-13/simple-python-app/requirements.txt
+      - pip install -r day-14/simple-python-app/requirements.txt
   build:
     commands:
       - echo "Running tests..."
